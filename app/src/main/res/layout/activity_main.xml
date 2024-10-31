@@ -15,7 +15,7 @@
         android:text="Contatos"
         android:textSize="38sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartf="@id/iv_list"
+        app:layout_constraintEnd_toStartOf="@id/iv_list"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

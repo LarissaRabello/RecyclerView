@@ -1,5 +1,6 @@
 package com.devspace.recyclerview
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
@@ -36,6 +37,15 @@ class MainActivity : AppCompatActivity() {
 
         ivList.setOnClickListener {
             rvList.layoutManager = LinearLayoutManager(this)
+        }
+
+        adapter.setOnClickListener { contact ->
+            val intent = Intent(this, ContactDetailActivity:: class.java)
+            intent.putExtra("name", contact.name)
+            intent.putExtra("phone", contact.phone)
+            intent.putExtra("icon", contact.icon)
+
+            startActivity(intent)
         }
     }
 }
